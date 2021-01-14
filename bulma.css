@@ -6461,7 +6461,7 @@ body.has-navbar-fixed-bottom, html.has-navbar-fixed-bottom {
         top: auto
     }
     .navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown {
-        display: block
+        display: block;
     }
     .navbar-item.is-active .navbar-dropdown.is-boxed, .navbar-item.is-hoverable:focus .navbar-dropdown.is-boxed, .navbar-item.is-hoverable:focus-within .navbar-dropdown.is-boxed, .navbar-item.is-hoverable:hover .navbar-dropdown.is-boxed, .navbar.is-spaced .navbar-item.is-active .navbar-dropdown, .navbar.is-spaced .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar.is-spaced .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar.is-spaced .navbar-item.is-hoverable:hover .navbar-dropdown {
         opacity: 1;
@@ -6492,7 +6492,9 @@ body.has-navbar-fixed-bottom, html.has-navbar-fixed-bottom {
         min-width: 100%;
         position: absolute;
         top: 100%;
-        z-index: 20
+        z-index: 1;
+        transition: 0.08s ease;
+        background: linear-gradient(180deg, transparent -70%, transparent -25.5px, hsla(var(--main), 20%, 35%, 0.85) -6.5px, hsla(var(--main), 20%, 35%, 0.85) 100%);
     }
     .navbar-dropdown .navbar-item {
         padding: .375rem 1rem;
@@ -9885,7 +9887,8 @@ h6 {
 }
 
 .navbar {
-    border-radius: .4em
+    border-radius: .4em;
+    z-index: 200;
 }
 
 .navbar.is-transparent {
